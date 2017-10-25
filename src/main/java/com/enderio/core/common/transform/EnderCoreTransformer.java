@@ -30,7 +30,7 @@ import static org.objectweb.asm.Opcodes.ILOAD;
 import static org.objectweb.asm.Opcodes.INVOKESTATIC;
 import static org.objectweb.asm.Opcodes.INVOKEVIRTUAL;
 
-@MCVersion(value = "1.11")
+@MCVersion(value = "1.12")
 public class EnderCoreTransformer implements IClassTransformer {
 
   // The EnderCore class cannot be referenced from the transformer,
