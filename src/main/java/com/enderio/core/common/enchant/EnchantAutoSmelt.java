@@ -9,6 +9,7 @@ import com.enderio.core.common.config.ConfigHandler;
 import com.enderio.core.common.util.NullHelper;
 import com.google.common.base.Predicate;
 
+import com.mojang.authlib.GameProfileRepository;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.init.Enchantments;
@@ -19,9 +20,14 @@ import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemFishingRod;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.event.FMLInterModComms;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.registries.RegistryBuilder;
+import net.minecraftforge.registries.RegistryManager;
 
 public class EnchantAutoSmelt extends Enchantment implements IAdvancedEnchant {
 
@@ -90,7 +96,7 @@ public class EnchantAutoSmelt extends Enchantment implements IAdvancedEnchant {
     return new String[] { EnderCore.lang.localize("enchantment.autosmelt.tooltip", false) };
   }
 
-  public static void register() {
+  /*public static void register() {
     if (ConfigHandler.allowAutoSmelt) {
       INSTANCE = new EnchantAutoSmelt();
       GameRegistry.register(INSTANCE);
@@ -98,6 +104,8 @@ public class EnchantAutoSmelt extends Enchantment implements IAdvancedEnchant {
           "<enchantment name=\"" + EnderCore.DOMAIN + ":autosmelt\">\n<itemStack oreDictionary=\"blockCoal\" number=\"32\"/>\n</enchantment>");
     }
   }
+  */ //todo: fix
+
 
   @Override
   public boolean canApplyTogether(@Nonnull Enchantment ench) {

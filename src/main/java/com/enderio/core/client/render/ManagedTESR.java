@@ -23,7 +23,7 @@ public abstract class ManagedTESR<T extends TileEntityBase> extends TileEntitySp
   }
 
   @SuppressWarnings({ "null", "unused" })
-  @Override
+  //@Override
   public final void renderTileEntityAt(@Nonnull T te, double x, double y, double z, float partialTicks, int destroyStage) {
     if (te != null && te.hasWorld() && !te.isInvalid()) {
       final IBlockState blockState = te.getWorld().getBlockState(te.getPos());

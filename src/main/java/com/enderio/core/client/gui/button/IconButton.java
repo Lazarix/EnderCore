@@ -71,7 +71,7 @@ public class IconButton extends TooltipButton {
   /**
    * Draws this button to the screen.
    */
-  @Override
+  /*@Override
   public void drawButton(@Nonnull Minecraft mc, int mouseX, int mouseY) {
     updateTooltip(mc, mouseX, mouseY);
     if (isVisible()) {
@@ -101,7 +101,7 @@ public class IconButton extends TooltipButton {
       GL11.glPopAttrib();
     }
   }
-
+*/ //todo: fix
   protected @Nonnull IWidgetIcon getIconForHoverState(int hoverState) {
     if (hoverState == 0) {
       return EnderWidget.BUTTON_DISABLED;

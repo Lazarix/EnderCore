@@ -30,10 +30,10 @@ public class Tweaks {
 
   public static void loadNonIngameTweaks() {
     // @formatter:off
-    tweaks.add(new SlabRecipes());
+    //tweaks.add(new SlabRecipes()); //todo: fix
     tweaks.add(new InfiniBow());
 
-    tweaks.add(new Tweak("bookToPaperRecipe", "Adds shapeless recipe from 1 book to 2 paper") {
+    /*tweaks.add(new Tweak("bookToPaperRecipe", "Adds shapeless recipe from 1 book to 2 paper") {
       @Override
       public void load() { GameRegistry.addShapelessRecipe(new ItemStack(Items.PAPER, 2), Items.BOOK); }
     });
@@ -41,7 +41,7 @@ public class Tweaks {
     tweaks.add(new Tweak("shapelessPaperRecipe","Adds a shapeless recipe for paper") {
       @Override
       public void load() { GameRegistry.addShapelessRecipe(new ItemStack(Items.PAPER, 3), Items.REEDS, Items.REEDS, Items.REEDS); }
-    });
-    // @formatter:on
+    });*/
+    // @formatter:on //todo: fix
   }
 }

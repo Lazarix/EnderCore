@@ -94,12 +94,12 @@ public class EnchantXPBoost extends Enchantment implements IAdvancedEnchant {
     return new String[] { EnderCore.lang.localize("enchantment.xpboost.tooltip", false) };
   }
 
-  public static void register() {
+ /* public static void register() {
     if (ConfigHandler.allowXPBoost) {
       INSTANCE = new EnchantXPBoost();
       GameRegistry.register(INSTANCE);
       FMLInterModComms.sendMessage("EnderIO", "recipe:enchanter",
           "<enchantment name=\"" + EnderCore.DOMAIN + ":xpboost\" >\n<itemStack oreDictionary=\"ingotGold\" number=\"16\"/>\n</enchantment>");
     }
-  }
+  }*/ //todo: fix
 }

@@ -286,12 +286,12 @@ public class ConfigProcessor {
     }
     throw new IllegalArgumentException(String.format("No adapter for type %s in class %s, field %s", f.getGenericType(), configs, f));
   }
-
+//todo: fix
   protected ITypeAdapter<?, ?> getAdapterFor(@Nonnull Field f) {
     TypeToken<?> t = TypeToken.of(f.getGenericType());
     Class<?> c = f.getType();
     for (ITypeAdapter<?, ?> adapter : adapters) {
-      if ((c.isPrimitive() && c == adapter.getPrimitiveType()) || adapter.getActualType().isAssignableFrom(t)) {
+      if ((c.isPrimitive() && c == adapter.getPrimitiveType()) /*|| adapter.getActualType().isAssignableFrom(t)*/) {
         return adapter;
       }
     }

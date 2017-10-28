@@ -114,8 +114,8 @@ public class EnderCore implements IEnderMod {
     CompatRegistry.INSTANCE.handle(event);
     OreDict.registerVanilla();
 
-    EnchantXPBoost.register();
-    EnchantAutoSmelt.register();
+    //EnchantXPBoost.register(); //todo: fix
+    //EnchantAutoSmelt.register(); //todo: fix
 
     proxy.onPreInit(event);
   }

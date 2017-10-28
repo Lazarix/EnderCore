@@ -1,11 +1,8 @@
 package com.enderio.core.common.network;
-
 import java.lang.reflect.TypeVariable;
-
 import javax.annotation.Nonnull;
 
 import com.google.common.reflect.TypeToken;
-
 import io.netty.buffer.ByteBuf;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
@@ -17,10 +14,10 @@ public abstract class MessageTileEntity<T extends TileEntity> implements IMessag
 
   private long pos;
 
-  protected MessageTileEntity() {
+  MessageTileEntity() {
   }
 
-  protected MessageTileEntity(@Nonnull T tile) {
+  MessageTileEntity(@Nonnull T tile) {
     pos = tile.getPos().toLong();
   }
 
@@ -58,9 +55,9 @@ public abstract class MessageTileEntity<T extends TileEntity> implements IMessag
       if (typeParam0 != null) {
         TypeToken<?> teType = TypeToken.of(ourClass).resolveType(typeParam0);
         final Class<? extends TileEntity> teClass = te.getClass();
-        if (teType.isAssignableFrom(teClass)) {
+        /*if (teType.isAssignableFrom(teClass)) {
           return (T) te;
-        }
+        }*/ //todo: fix
       }
     }
     return null;

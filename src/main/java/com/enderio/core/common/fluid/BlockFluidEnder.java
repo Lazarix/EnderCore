@@ -57,9 +57,9 @@ public abstract class BlockFluidEnder extends BlockFluidClassic {
     setRegistryName("block_fluid_" + fluid.getName().toLowerCase(Locale.ENGLISH));
   }
 
-  public void init() {
+  /*public void init() {
     GameRegistry.register(this);
-  }
+  }*/ //todo: fix
 
   public float getFogColorRed() {
     return fogColorRed;
@@ -114,13 +114,13 @@ public abstract class BlockFluidEnder extends BlockFluidClassic {
     return super.displaceIfPossible(world, pos);
   }
 
-  @Override
+  //@Override
   @SideOnly(Side.CLIENT)
-  public void getSubBlocks(@Nonnull Item itemIn, @Nullable CreativeTabs tab, @Nonnull NonNullList<ItemStack> list) {
+  /*public void getSubBlocks(@Nonnull Item itemIn, @Nullable CreativeTabs tab, @Nonnull NonNullList<ItemStack> list) {
     if (tab != null) {
       super.getSubBlocks(itemIn, tab, list);
     }
-  }
+  }*/ //todo: fix
 
   /////////////////////////////////////////////////////////////////////////
   // Molten Metal
@@ -130,7 +130,7 @@ public abstract class BlockFluidEnder extends BlockFluidClassic {
 
     public static MoltenMetal create(Fluid fluid, Material material, int fogColor) {
       MoltenMetal res = new MoltenMetal(fluid, material, fogColor);
-      res.init();
+      //res.init();
       fluid.setBlock(res);
       return res;
     }

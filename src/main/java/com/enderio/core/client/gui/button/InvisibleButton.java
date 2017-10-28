@@ -22,7 +22,7 @@ public class InvisibleButton extends TooltipButton {
   /**
    * Draws this button to the screen.
    */
-  @Override
+  //@Override
   public void drawButton(@Nonnull Minecraft mc, int mouseX, int mouseY) {
     updateTooltip(mc, mouseX, mouseY);
   }

@@ -69,12 +69,12 @@ public class TextFieldEnder extends GuiTextField implements IHideable {
     yOrigin = y;
     filter = charFilter;
   }
-
+/*
   public void init(@Nonnull IGuiScreen gui) {
     xPosition = xOrigin + gui.getGuiLeft();
     yPosition = yOrigin + gui.getGuiTop();
   }
-
+*/ //todo: fix
   public TextFieldEnder setCharFilter(@Nullable ICharFilter filter) {
     this.filter = filter;
     return this;
@@ -101,11 +101,11 @@ public class TextFieldEnder extends GuiTextField implements IHideable {
       throw new RuntimeException(e);
     }
   }
-
+/*
   public boolean contains(int x, int y) {
     return x >= xPosition && x < xPosition + width && y >= yPosition && y < yPosition + height;
   }
-
+*/ //todo: fix
   @Override
   public boolean isVisible() {
     return getVisible();

@@ -33,15 +33,15 @@ import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 @Handler
 public class XPBoostHandler {
-  private static final Method getExperiencePoints = ReflectionHelper.findMethod(EntityLivingBase.class, null,
+  /*private static final Method getExperiencePoints = ReflectionHelper.findMethod(EntityLivingBase.class, null,
       new String[] { "e", "func_70693_a", "getExperiencePoints" }, EntityPlayer.class);
-
+*/
   private static final @Nonnull String NBT_KEY = "endercore:xpboost";
 
   @SubscribeEvent
   public static void handleEntityKill(LivingDeathEvent event) {
     EntityLivingBase entity = event.getEntityLiving();
-    Entity killer = event.getSource().getSourceOfDamage();
+    Entity killer = event.getSource().getImmediateSource();
 
     if (!entity.world.isRemote && killer != null) {
       if (killer instanceof EntityPlayer && !(killer instanceof FakePlayer)) {
@@ -94,8 +94,8 @@ public class XPBoostHandler {
   private static int getXPBoost(EntityLivingBase killed, EntityPlayer player, int level) {
     if (level >= 0) {
       try {
-        int xp = (Integer) getExperiencePoints.invoke(killed, player);
-        return getXPBoost(xp, level);
+        //int xp = (Integer) getExperiencePoints.invoke(killed, player);
+        //return getXPBoost(xp, level); //todo: fix
       } catch (Exception e) {
         Throwables.propagate(e);
       }

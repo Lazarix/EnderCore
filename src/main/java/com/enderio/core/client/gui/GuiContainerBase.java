@@ -42,7 +42,7 @@ public abstract class GuiContainerBase extends GuiContainer implements ToolTipRe
   protected GuiContainerBase(@Nonnull Container par1Container) {
     super(par1Container);
   }
-
+/*
   @Override
   public void initGui() {
     super.initGui();
@@ -57,7 +57,7 @@ public abstract class GuiContainerBase extends GuiContainer implements ToolTipRe
 
   protected void fixupGuiPosition() {
   }
-
+*/ //todo: fix
   @Override
   protected void keyTyped(char c, int key) throws IOException {
     TextFieldEnder focused = null;
@@ -212,13 +212,13 @@ public abstract class GuiContainerBase extends GuiContainer implements ToolTipRe
       }
     }
     // Right click field clearing
-    if (button == 1) {
+/*    if (button == 1) {
       for (TextFieldEnder tf : textFields) {
         if (tf.contains(x, y)) {
           setText(tf, "");
         }
       }
-    }
+    }*/ //todo: fix
     // Button events for non-left-clicks
     if (button >= 1) {
       for (Object obj : buttonList) {

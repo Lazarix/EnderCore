@@ -50,7 +50,7 @@ public class TooltipButton extends GuiButtonHideable {
   public final @Nonnull Rectangle getBounds() {
     return new Rectangle(xOrigin, yOrigin, getWidth(), getHeight());
   }
-
+/*
   public void onGuiInit() {
     gui.addButton(this);
     if (toolTip != null) {
@@ -59,7 +59,7 @@ public class TooltipButton extends GuiButtonHideable {
     xPosition = xOrigin + gui.getGuiLeft();
     yPosition = yOrigin + gui.getGuiTop();
   }
-
+*/ //todo: fix
   public void detach() {
     if (toolTip != null) {
       gui.removeToolTip(toolTip);
@@ -111,18 +111,18 @@ public class TooltipButton extends GuiButtonHideable {
       toolTip.setIsVisible(visible && enabled);
     }
   }
-
-  protected final void doDrawButton(@Nonnull Minecraft mc, int mouseX, int mouseY) {
-    super.drawButton(mc, mouseX, mouseY);
-  }
-
-  /**
-   * Draws this button to the screen.
-   */
-  @Override
+  /*
+    protected final void doDrawButton(@Nonnull Minecraft mc, int mouseX, int mouseY) {
+      super.drawButton(mc, mouseX, mouseY);
+    }
+ */ //todo: fix
+    /**
+     * Draws this button to the screen.
+     */
+  /*@Override
   public void drawButton(@Nonnull Minecraft mc, int mouseX, int mouseY) {
     updateTooltip(mc, mouseX, mouseY);
     doDrawButton(mc, mouseX, mouseY);
   }
-
+*/ //todo: fix
 }

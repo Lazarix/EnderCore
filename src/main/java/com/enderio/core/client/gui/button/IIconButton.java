@@ -61,7 +61,7 @@ public class IIconButton extends GuiButton {
   /**
    * Draws this button to the screen.
    */
-  @Override
+  /*@Override
   public void drawButton(@Nonnull Minecraft par1Minecraft, int mouseX, int mouseY) {
     if (visible) {
 
@@ -98,5 +98,5 @@ public class IIconButton extends GuiButton {
       }
     }
   }
-
+*/ //todo: fix
 }

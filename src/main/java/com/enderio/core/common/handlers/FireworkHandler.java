@@ -13,12 +13,12 @@ import com.enderio.core.common.util.NullHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.stats.advancements;
+//import net.minecraft.stats.advancements; //todo: fix
 import net.minecraft.stats.StatisticsManagerServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraftforge.event.entity.player.AdvancementEvent;
+//import net.minecraftforge.event.entity.player.AdvancementEvent; //todo: fix
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
@@ -29,7 +29,7 @@ import static java.util.Calendar.MONTH;
 
 @Handler
 public class FireworkHandler {
-  @SubscribeEvent
+  /*@SubscribeEvent //todo: fix
   public void onAdvancement(AdvancementEvent event) {
     StatisticsManagerServer file = ((EntityPlayerMP) event.getEntityPlayer()).getStatFile();
     final @Nonnull Advancement advancement = NullHelper.notnullF(event.getAdvancement(), "AdvancementEvent.getAdvancement()");
@@ -38,7 +38,7 @@ public class FireworkHandler {
       event.getEntityPlayer().getEntityData().setInteger("fireworksLeft", 9);
       event.getEntityPlayer().getEntityData().setBoolean("fireworkDelay", false);
     }
-  }
+  }*/
 
   @SubscribeEvent
   public void onPlayerTick(PlayerTickEvent event) {

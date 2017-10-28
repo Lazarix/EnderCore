@@ -15,7 +15,7 @@ import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.LoaderException;
 import net.minecraftforge.fml.common.LoaderState;
-import net.minecraftforge.fml.common.registry.GameData;
+import net.minecraftforge.registries.GameData;
 
 /**
  * This class provides a few utility methods to regain the ability to register
