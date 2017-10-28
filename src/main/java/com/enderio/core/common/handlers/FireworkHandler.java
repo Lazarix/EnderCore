@@ -13,12 +13,12 @@ import com.enderio.core.common.util.NullHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.stats.Achievement;
+import net.minecraft.stats.advancements;
 import net.minecraft.stats.StatisticsManagerServer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraftforge.event.entity.player.AchievementEvent;
+import net.minecraftforge.event.entity.player.AdvancementEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
@@ -30,11 +30,11 @@ import static java.util.Calendar.MONTH;
 @Handler
 public class FireworkHandler {
   @SubscribeEvent
-  public void onAchievement(AchievementEvent event) {
+  public void onAdvancement(AdvancementEvent event) {
     StatisticsManagerServer file = ((EntityPlayerMP) event.getEntityPlayer()).getStatFile();
-    final @Nonnull Achievement achievement = NullHelper.notnullF(event.getAchievement(), "AchievementEvent.getAchievement()");
-    if (ConfigHandler.betterAchievements && !event.getEntity().world.isRemote && file.canUnlockAchievement(achievement)
-        && !file.hasAchievementUnlocked(achievement)) {
+    final @Nonnull Advancement advancement = NullHelper.notnullF(event.getAdvancement(), "AdvancementEvent.getAdvancement()");
+    if (ConfigHandler.betterAdvancements && !event.getEntity().world.isRemote && file.canUnlockAdvancement(advancement)
+        && !file.hasAdvancementUnlocked(advancement)) {
       event.getEntityPlayer().getEntityData().setInteger("fireworksLeft", 9);
       event.getEntityPlayer().getEntityData().setBoolean("fireworkDelay", false);
     }
