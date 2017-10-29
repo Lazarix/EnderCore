@@ -14,10 +14,10 @@ public abstract class MessageTileEntity<T extends TileEntity> implements IMessag
 
   private long pos;
 
-  MessageTileEntity() {
+  public MessageTileEntity() {
   }
 
-  MessageTileEntity(@Nonnull T tile) {
+  public MessageTileEntity(@Nonnull T tile) {
     pos = tile.getPos().toLong();
   }
 
